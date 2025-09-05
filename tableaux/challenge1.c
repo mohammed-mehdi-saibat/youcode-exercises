@@ -6,6 +6,5 @@ int  main() {
 
   for(int i = 0; i < taille; i++) {
     printf("%d\n", tableau[i]);
-    // printf("\n");
   }
 }
