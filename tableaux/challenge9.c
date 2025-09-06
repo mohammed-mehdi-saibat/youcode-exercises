@@ -20,14 +20,16 @@ int main() {
         }
         printf("\n");
         
-        int tableauInverse[taille];
-        for (int i = 0; i < taille; i++) {
-            tableauInverse[i] = tableau[taille - 1 - i];  // ✅ correct
+
+        for (int i = 0; i < taille / 2; i++) {
+            int temp = tableau[i];
+            tableau[i] = tableau[taille - 1 - i];
+            tableau[taille - 1 - i] = temp;
         }
 
         printf("Les elements du tableau inverse: ");
         for (int i = 0; i < taille; i++) {
-            printf("%d ", tableauInverse[i]);
+            printf("%d ", tableau[i]);
         }
         printf("\n");
 
